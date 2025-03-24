@@ -141,7 +141,7 @@ const Navbar = () => {
                   Chat
                 </Link>
                 <button
-                  onClick={logout}
+                  onClick={handleLogout}
                   className="py-2 px-4 rounded-md text-white"
                   style={{ backgroundColor: "#1B1924" }}
                 >

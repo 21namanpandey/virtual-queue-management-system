@@ -54,10 +54,26 @@ export const register = async (userData) => {
   }
 };
 
+// export const logout = async () => {
+//   try {
+//     await API.post("/auth/logout", {}, { withCredentials: true });
+//     window.location.href = "/login";
+//   } catch (error) {
+//     console.error("Error logging out:", error);
+//   }
+// };
+
 export const logout = async () => {
   try {
-    await API.post("/auth/logout", {}, { withCredentials: true });
-    window.location.href = "/login";
+    const response = await API.post("/auth/logout", {}, { withCredentials: true });
+
+    if (response.data.success) {
+      localStorage.removeItem("user");
+      localStorage.removeItem("token");
+      document.cookie = "token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+
+      window.location.href = "/login";
+    }
   } catch (error) {
     console.error("Error logging out:", error);
   }
