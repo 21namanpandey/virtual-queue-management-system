@@ -35,7 +35,7 @@ Q-Manager is a **Virtual Queue Management System** built using the **MERN stack*
 ---
 
 ## 🖥️ Screenshots  
-_Add screenshots of your project UI here (e.g., dashboard, queue tracking, admin panel)._  
+  Uploading... 
 
 ---
 
